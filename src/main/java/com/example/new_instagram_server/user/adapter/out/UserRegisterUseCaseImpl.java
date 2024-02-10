@@ -1,8 +1,8 @@
 package com.example.new_instagram_server.user.adapter.out;
 
 import com.example.new_instagram_server.user.adapter.in.UserRegisterRequestDto;
-import com.example.new_instagram_server.user.port.in.UserRegisterUseCase;
-import com.example.new_instagram_server.user.port.service.UserRegisterService;
+import com.example.new_instagram_server.user.application.port.in.UserRegisterUseCase;
+import com.example.new_instagram_server.user.application.port.service.UserRegisterService;
 import lombok.RequiredArgsConstructor;
 
 // 외부 시스템과 내부 시스템의 상호작용을 위한 어댑터

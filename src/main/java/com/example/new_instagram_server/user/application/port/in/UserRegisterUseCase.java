@@ -1,4 +1,4 @@
-package com.example.new_instagram_server.user.port.in;
+package com.example.new_instagram_server.user.application.port.in;
 
 import com.example.new_instagram_server.user.adapter.in.UserRegisterRequestDto;
 import com.example.new_instagram_server.user.adapter.out.UserRegisterResponseDto;
