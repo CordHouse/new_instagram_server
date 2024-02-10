@@ -1,7 +1,7 @@
 package com.example.new_instagram_server.user.adapter.in;
 
 import com.example.new_instagram_server.user.adapter.out.UserRegisterResponseDto;
-import com.example.new_instagram_server.user.port.in.UserRegisterUseCase;
+import com.example.new_instagram_server.user.application.port.in.UserRegisterUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
