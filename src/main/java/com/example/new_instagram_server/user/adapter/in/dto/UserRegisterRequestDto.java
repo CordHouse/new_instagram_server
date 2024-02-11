@@ -1,4 +1,4 @@
-package com.example.new_instagram_server.user.adapter.in;
+package com.example.new_instagram_server.user.adapter.in.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
