@@ -1,5 +1,7 @@
 package com.example.new_instagram_server.user.adapter.in;
 
+import com.example.new_instagram_server.user.adapter.in.dto.UserDeleteRequestDto;
+import com.example.new_instagram_server.user.adapter.in.dto.UserRegisterRequestDto;
 import com.example.new_instagram_server.user.adapter.out.UserRegisterResponseDto;
 import com.example.new_instagram_server.user.application.port.in.UserRegisterUseCase;
 import lombok.RequiredArgsConstructor;
@@ -21,4 +23,13 @@ public class UserController {
     public UserRegisterResponseDto signUp(@ModelAttribute @Valid UserRegisterRequestDto userRegisterRequestDto) {
         return userRegisterUseCase.signUp(userRegisterRequestDto);
     }
+
+    // 회원 탈퇴
+    @DeleteMapping("/profile")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteUser(@RequestBody @Valid UserDeleteRequestDto userDeleteRequestDto) {
+        userRegisterUseCase.deleteUser(userDeleteRequestDto);
+    }
+
+    // 로그인
 }

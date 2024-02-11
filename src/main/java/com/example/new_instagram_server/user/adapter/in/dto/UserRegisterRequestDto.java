@@ -1,4 +1,4 @@
-package com.example.new_instagram_server.user.adapter.in;
+package com.example.new_instagram_server.user.adapter.in.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,8 +11,11 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserRegisterRequestDto {
-    @NotBlank(message = "사용할 닉네임을 입력해주세요.")
+    @NotBlank(message = "사용할 아이디를 입력해주세요.")
     private String nickname;
+
+    @NotBlank(message = "사용할 비밀번호를 입력해주세요.")
+    private String password;
 
     private MultipartFile profile_image;
 }
