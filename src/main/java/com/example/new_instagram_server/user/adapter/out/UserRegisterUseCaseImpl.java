@@ -1,6 +1,7 @@
 package com.example.new_instagram_server.user.adapter.out;
 
-import com.example.new_instagram_server.user.adapter.in.UserRegisterRequestDto;
+import com.example.new_instagram_server.user.adapter.in.dto.UserDeleteRequestDto;
+import com.example.new_instagram_server.user.adapter.in.dto.UserRegisterRequestDto;
 import com.example.new_instagram_server.user.application.port.in.UserRegisterUseCase;
 import com.example.new_instagram_server.user.application.port.service.UserRegisterService;
 import lombok.RequiredArgsConstructor;
@@ -13,5 +14,10 @@ public class UserRegisterUseCaseImpl implements UserRegisterUseCase {
     public UserRegisterResponseDto signUp(UserRegisterRequestDto userRegisterRequestDto) {
         // 인터페이스를 의존
         return userRegisterService.signUp(userRegisterRequestDto);
+    }
+
+    @Override
+    public void deleteUser(UserDeleteRequestDto userDeleteRequestDto) {
+        userRegisterService.deleteUser(userDeleteRequestDto);
     }
 }
