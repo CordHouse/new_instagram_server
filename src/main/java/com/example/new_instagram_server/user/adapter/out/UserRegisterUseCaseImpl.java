@@ -2,6 +2,7 @@ package com.example.new_instagram_server.user.adapter.out;
 
 import com.example.new_instagram_server.user.adapter.in.dto.UserDeleteRequestDto;
 import com.example.new_instagram_server.user.adapter.in.dto.UserRegisterRequestDto;
+import com.example.new_instagram_server.user.adapter.out.dto.UserRegisterResponseDto;
 import com.example.new_instagram_server.user.application.port.in.UserRegisterUseCase;
 import com.example.new_instagram_server.user.application.port.service.UserRegisterService;
 import lombok.RequiredArgsConstructor;

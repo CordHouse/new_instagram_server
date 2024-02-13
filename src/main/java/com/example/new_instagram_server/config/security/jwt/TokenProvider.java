@@ -1,6 +1,6 @@
 package com.example.new_instagram_server.config.security.jwt;
 
-import com.example.new_instagram_server.user.adapter.in.dto.TokenResponseDto;
+import com.example.new_instagram_server.user.adapter.out.dto.TokenResponseDto;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
