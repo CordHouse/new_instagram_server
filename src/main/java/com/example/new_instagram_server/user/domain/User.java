@@ -25,7 +25,7 @@ public class User {
     private String nickname;
 
     @Column(nullable = false)
-    private String profile_image_url;
+    private String profileImageUrl;
 
     @Column(nullable = false)
     @ColumnDefault("0")
