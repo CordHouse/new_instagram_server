@@ -1,7 +1,6 @@
 package com.example.new_instagram_server.user.adapter.in;
 
 import com.example.new_instagram_server.user.adapter.in.dto.UserEditProfileRequestDto;
-import com.example.new_instagram_server.user.adapter.in.dto.UserProfileRequestDto;
 import com.example.new_instagram_server.user.adapter.out.dto.UserEditProfileResponseDto;
 import com.example.new_instagram_server.user.adapter.out.dto.UserProfileResponseDto;
 import com.example.new_instagram_server.user.application.port.in.UserProfileUseCase;
@@ -20,8 +19,8 @@ public class UserProfileController {
     // 프로필 조회
     @GetMapping("/profile")
     @ResponseStatus(HttpStatus.OK)
-    public UserProfileResponseDto getProfile(@RequestBody @Valid UserProfileRequestDto userProfileRequestDto) {
-        return userProfileUseCase.getProfile(userProfileRequestDto);
+    public UserProfileResponseDto getProfile() {
+        return userProfileUseCase.getProfile();
     }
 
     // 프로필 수정
