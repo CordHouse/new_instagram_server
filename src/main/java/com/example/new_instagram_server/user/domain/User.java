@@ -12,7 +12,6 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -38,4 +37,11 @@ public class User {
     @Enumerated(value = EnumType.STRING)
     @Column(nullable = false)
     private UserRoleType role;
+
+    public User(String nickname, String password, String profileImageUrl, UserRoleType role) {
+        this.nickname = nickname;
+        this.password = password;
+        this.profileImageUrl = profileImageUrl;
+        this.role = role;
+    }
 }
