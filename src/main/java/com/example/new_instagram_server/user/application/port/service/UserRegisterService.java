@@ -28,7 +28,7 @@ public class UserRegisterService implements UserRegisterUseCase {
         User newUser = new User (
                 userRegisterRequestDto.getNickname(),
                 passwordEncoder.encoder(userRegisterRequestDto.getPassword()),
-                userRegisterRequestDto.getProfile_image().getOriginalFilename(),
+                userRegisterRequestDto.getProfileImage().getOriginalFilename(),
                 UserRoleType.ROLE_MEMBER
         );
         userRepository.save(newUser);
