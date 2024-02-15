@@ -25,12 +25,12 @@ public class UserRegisterService implements UserRegisterUseCase {
     // 회원가입 로직 설계
     @Override
     public UserRegisterResponseDto signUp(UserRegisterRequestDto userRegisterRequestDto) {
-        User newUser = User.builder()
-                .nickname(userRegisterRequestDto.getNickname())
-                .password(passwordEncoder.encoder(userRegisterRequestDto.getPassword()))
-                .profile_image_url(userRegisterRequestDto.getProfile_image().getOriginalFilename())
-                .role(UserRoleType.ROLE_MEMBER)
-                .build();
+        User newUser = new User (
+                userRegisterRequestDto.getNickname(),
+                passwordEncoder.encoder(userRegisterRequestDto.getPassword()),
+                userRegisterRequestDto.getProfile_image().getOriginalFilename(),
+                UserRoleType.ROLE_MEMBER
+        );
         userRepository.save(newUser);
         return new UserRegisterResponseDto().toDo(newUser);
     }
