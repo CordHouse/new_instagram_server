@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
 public class UserRegisterResponseDto {
     private long id;
     private String nickname;
-    private String profile_image_url;
+    private String profileImageUrl;
 
     public UserRegisterResponseDto toDo(User user) {
-        return new UserRegisterResponseDto(user.getId(), user.getNickname(), user.getProfile_image_url());
+        return new UserRegisterResponseDto(user.getId(), user.getNickname(), user.getProfileImageUrl());
     }
 }
