@@ -22,7 +22,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public Optional<User> findByNickname(String nickname) {
-        return jpaRepository.findByNickname();
+        return jpaRepository.findByNickname(nickname);
     }
 
     @Override
