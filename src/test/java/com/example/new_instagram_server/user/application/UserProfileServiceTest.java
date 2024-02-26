@@ -1,5 +1,7 @@
 package com.example.new_instagram_server.user.application;
 
+import com.example.new_instagram_server.user.adapter.in.dto.UserEditProfileRequestDto;
+import com.example.new_instagram_server.user.adapter.out.dto.UserEditProfileResponseDto;
 import com.example.new_instagram_server.user.adapter.out.dto.UserProfileResponseDto;
 import com.example.new_instagram_server.user.application.port.out.GetAuthentication;
 import com.example.new_instagram_server.user.application.port.out.UserRepository;
@@ -11,6 +13,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
@@ -58,9 +61,32 @@ public class UserProfileServiceTest {
     @DisplayName("프로필 수정")
     void editProfileRequestReturnOk() {
         // given
+        UserEditProfileRequestDto requestDto = new UserEditProfileRequestDto();
+        requestDto.setNickname("after name");
+        requestDto.setProfileImageUrl(new MockMultipartFile(
+                "name",
+                "name.png",
+                "image/png",
+                "name.png".getBytes()
+        ));
+
+        UserEditProfileResponseDto responseDto = new UserEditProfileResponseDto();
+        responseDto.setNickname("after name");
+        responseDto.setProfileImageUrl("name.png");
+
+        User user = new User();
+        user.setNickname("before name");
+
+        Authentication authentication = mock(Authentication.class);
+        doReturn(user.getNickname()).when(authentication).getName();
+        doReturn(authentication).when(getAuthentication).getAuthentication();
+        doReturn(Optional.of(user)).when(userRepository).findByNickname(anyString());
 
         // when
+        UserEditProfileResponseDto editProfileResponseDto = userProfileService.editProfile(requestDto);
 
         // then
+        assertThat(editProfileResponseDto).isNotNull();
+        assertThat(editProfileResponseDto.getNickname()).isEqualTo(responseDto.getNickname());
     }
 }
