@@ -50,7 +50,7 @@ public class FollowService implements FollowUseCase {
 
     /***
      * 팔로우가 가능한지 확인한다. ( 이미 신청한 사용자라면 예외처리 )
-     * @param user 팔로우 신청자
+     * @param followSenderUser 팔로우 신청자
      * @param followResponseUser 팔로우 신청을 받는 사람
      */
     @Transactional
