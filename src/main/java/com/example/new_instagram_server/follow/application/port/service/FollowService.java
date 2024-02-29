@@ -22,6 +22,8 @@ public class FollowService implements FollowUseCase {
     private final UserRepository userRepository;
     private final FollowRepository followRepository;
     private final GetAuthentication getAuthentication;
+
+    // 팔로우
     @Override
     @Transactional
     public void userFollow(UserFollowRequestDto userFollowRequestDto) {
@@ -35,6 +37,7 @@ public class FollowService implements FollowUseCase {
         followReceiverUser.setFollowing(followReceiverUser.getFollowing()+FOLLOW_COUNT);
     }
 
+    // 언팔로우
     @Override
     @Transactional
     public void userUnFollow(UserUnFollowRequestDto userUnFollowRequestDto) {
