@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class follow {
+public class Follow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -27,4 +27,9 @@ public class follow {
     @JoinColumn(name = "receiverId", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private User receiver;
+
+    public Follow(User sender, User receiver) {
+        this.sender = sender;
+        this.receiver = receiver;
+    }
 }
