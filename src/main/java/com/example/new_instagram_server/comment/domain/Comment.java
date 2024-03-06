@@ -1,5 +1,7 @@
 package com.example.new_instagram_server.comment.domain;
 
+import com.example.new_instagram_server.posts.domain.Posts;
+import com.example.new_instagram_server.replies.domain.Replies;
 import com.example.new_instagram_server.user.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,12 +25,12 @@ public class Comment {
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "posts_id", nullable = false)
+    @JoinColumn(name = "postsId", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Posts posts;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "userId", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private User user;
 
