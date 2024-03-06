@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class FeedPostsResponseDto {
     private long id;
     private String content;
-    private String image_url;
+    private String imageUrl;
     private List<FeedCommentResponseDto> comments;
 
     public FeedPostsResponseDto toDo(Posts posts) {
