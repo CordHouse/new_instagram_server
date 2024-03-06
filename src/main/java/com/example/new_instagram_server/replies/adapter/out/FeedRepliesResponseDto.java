@@ -19,6 +19,6 @@ public class FeedRepliesResponseDto {
                 replies.getId(),
                 replies.getContent(),
                 replies.getUser().getNickname(),
-                replies.getUser().getProfile_image_url());
+                replies.getUser().getProfileImageUrl());
     }
 }
