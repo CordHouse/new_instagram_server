@@ -1,6 +1,7 @@
 package com.example.new_instagram_server.comment.adapter.out;
 
 import com.example.new_instagram_server.comment.domain.Comment;
+import com.example.new_instagram_server.replies.adapter.out.FeedRepliesResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
