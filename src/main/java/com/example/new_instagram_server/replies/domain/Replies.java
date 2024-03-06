@@ -1,5 +1,6 @@
 package com.example.new_instagram_server.replies.domain;
 
+import com.example.new_instagram_server.comment.domain.Comment;
 import com.example.new_instagram_server.user.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
