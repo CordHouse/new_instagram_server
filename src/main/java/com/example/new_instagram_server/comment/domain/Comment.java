@@ -36,4 +36,10 @@ public class Comment {
 
     @OneToMany(mappedBy = "comment", fetch = FetchType.LAZY)
     private List<Replies> replies;
+
+    public Comment(User user, Posts posts, String content) {
+        this.user = user;
+        this.posts = posts;
+        this.content = content;
+    }
 }
