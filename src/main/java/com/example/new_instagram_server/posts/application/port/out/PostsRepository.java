@@ -19,4 +19,6 @@ public interface PostsRepository {
     Optional<Posts> findByIdAndUser(PostsEditRequestDto postsEditRequestDto, User user);
 
     void deleteByIdAndUser(PostsDeleteRequestDto postsDeleteRequestDto, User user);
+
+    Optional<Posts> findById(long id);
 }
