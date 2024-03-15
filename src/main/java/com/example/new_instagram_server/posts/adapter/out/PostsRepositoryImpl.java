@@ -61,6 +61,11 @@ public class PostsRepositoryImpl implements PostsRepository {
         postsJpaRepository.deleteByIdAndUser(postsDeleteRequestDto.getId(), user);
     }
 
+    @Override
+    public Optional<Posts> findById(long id) {
+        return postsJpaRepository.findById(id);
+    }
+
     private BooleanExpression cursorId(Long cursorId, QPosts qPosts) {
         if(cursorId == null) {
             return null;
