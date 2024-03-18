@@ -14,6 +14,9 @@
   API 가이드라인을 따라 계층형 아키텍처에서 헥사고날 아키텍처로 변환하여 instagram 서버를 구현한다.
   
   | **시스템 구조도 아키텍쳐** |
+
+  | **Hexgonal Architecture** | 
+  ![image](https://github.com/CordHouse/new_instagram_server/assets/74723818/d4e34a95-5e03-4821-9b5a-636a618f8051)
   
   | **REST APIs** |  
   ![REST](https://user-images.githubusercontent.com/74723818/230903512-52c8f8ea-540b-4067-9daa-2048a8d6319d.png)
