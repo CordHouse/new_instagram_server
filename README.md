@@ -17,6 +17,7 @@
 
   | **Hexgonal Architecture** | 
   ![image](https://github.com/CordHouse/new_instagram_server/assets/74723818/d4e34a95-5e03-4821-9b5a-636a618f8051)
+  (참고문헌 : https://tech.osci.kr/hexagonal-architecture/)
   
   | **REST APIs** |  
   ![REST](https://user-images.githubusercontent.com/74723818/230903512-52c8f8ea-540b-4067-9daa-2048a8d6319d.png)
