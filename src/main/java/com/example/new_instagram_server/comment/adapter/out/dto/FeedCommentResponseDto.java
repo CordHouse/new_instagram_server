@@ -1,4 +1,4 @@
-package com.example.new_instagram_server.comment.adapter.out;
+package com.example.new_instagram_server.comment.adapter.out.dto;
 
 import com.example.new_instagram_server.comment.domain.Comment;
 import com.example.new_instagram_server.replies.adapter.out.FeedRepliesResponseDto;
