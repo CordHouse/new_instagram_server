@@ -1,4 +1,4 @@
-package com.example.new_instagram_server.replies.adapter.out;
+package com.example.new_instagram_server.replies.adapter.out.dto;
 
 import com.example.new_instagram_server.replies.domain.Replies;
 import lombok.AllArgsConstructor;
