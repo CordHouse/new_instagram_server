@@ -11,4 +11,6 @@ public interface CommentRepository {
     Optional<Comment> findByIdAndUser(long commentId, User user);
 
     void deleteByIdAndUser(long commentId, User user);
+
+    Optional<Comment> findById(long id);
 }
