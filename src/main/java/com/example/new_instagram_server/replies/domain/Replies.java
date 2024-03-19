@@ -31,4 +31,10 @@ public class Replies {
     @JoinColumn(name = "userId", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private User user;
+
+    public Replies(User user, Comment comment, String content) {
+        this.user = user;
+        this.comment = comment;
+        this.content = content;
+    }
 }
