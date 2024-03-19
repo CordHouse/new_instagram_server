@@ -11,6 +11,8 @@ import java.util.Optional;
 public interface UserRepository {
     void save(User user); // 데이터 베이스에 저장
 
+    Optional<User> findById(long id);
+
     Optional<User> findByNickname(String nickname);
     void delete(User user);
 }

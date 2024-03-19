@@ -3,9 +3,11 @@ package com.example.new_instagram_server.user.adapter.out;
 import com.example.new_instagram_server.user.application.port.out.PasswordEncoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
-public class passwordEncoderImpl implements PasswordEncoder {
+@Component
+public class PasswordEncoderImpl implements PasswordEncoder {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     // 입력 받은 비밀번호 암호화

@@ -17,5 +17,5 @@ public class UserRegisterRequestDto {
     @NotBlank(message = "사용할 비밀번호를 입력해주세요.")
     private String password;
 
-    private MultipartFile profile_image;
+    private MultipartFile profileImage;
 }
